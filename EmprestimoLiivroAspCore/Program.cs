@@ -40,7 +40,7 @@ builder.Services.AddSession(options =>
 
 });
 
-//Add GerenciadorArquivo como serviços
+//Add Gerenciador Arquivo como serviços
 builder.Services.AddScoped<GerenciadorArquivo>();
 builder.Services.AddScoped<Cookie>();
 

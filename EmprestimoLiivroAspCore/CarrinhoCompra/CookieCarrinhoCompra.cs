@@ -43,7 +43,7 @@ namespace EmprestimoLiivroAspCore.CarrinhoCompra
             // Criar o metrodo salvar
             Salvar(Lista);
         }
-        //Atuliiza 
+        //Atualiza 
         public void Atualizar(Livro item)
         {
             var Lista = Consultar();
@@ -98,7 +98,7 @@ namespace EmprestimoLiivroAspCore.CarrinhoCompra
 
             return true;
         }
-
+        // Remove todos itens do carrinho
         public void RemoverTodos()
         {
             _cookie.Remover(Key);

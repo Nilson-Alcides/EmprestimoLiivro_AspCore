@@ -1,4 +1,5 @@
 ﻿using EmprestimoLiivroAspCore.Models;
+using EmprestimoLiivroAspCore.Repository.Contrato;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -7,16 +8,18 @@ namespace EmprestimoLiivroAspCore.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private ILivroRepository _livroRepository;
+        public HomeController(ILogger<HomeController> logger, ILivroRepository livroRepository)
         {
             _logger = logger;
+            _livroRepository = livroRepository;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(_livroRepository.ObterTodosLivros()); 
         }
+
 
         public IActionResult Privacy()
         {
