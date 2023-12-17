@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj": {}
+    "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj": {
+    "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj",
+        "projectUniqueName": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj",
         "projectName": "EmprestimoLiivroAspCore",
-        "projectPath": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj",
+        "projectPath": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj",
         "packagesPath": "C:\\Users\\Nilson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore\\obj\\",
+        "outputPath": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

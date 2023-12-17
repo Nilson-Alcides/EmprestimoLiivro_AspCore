@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uc/Yh1vU4/7N12o2QSXSlr8PAlo+44qL2dP1UPQIb5X0LSDOajjQ6Nc/WtCu+XBY8JksnnkM9JXq8L9+UHjBgg==",
+  "dgSpecHash": "yEel9GF0Twp/MPrqnp40MMvLzY5P+7iemSIqvPXpH9MVJ1mUv7qatUV9918l3vfCzw9u2O4Qj4g5hIgO0eQICg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj",
+  "projectFilePath": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\EmprestimoLiivroAspCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nilson\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Nilson\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
