@@ -14,10 +14,12 @@ namespace EmprestimoLiivroAspCore.Controllers
             _logger = logger;
             _livroRepository = livroRepository;
         }
+        //Cadastra Livro Get
         public IActionResult Index()
         {
             return View();
         }
+        //Cadastra Livro Post
         [HttpPost]
         public IActionResult Index(Livro livro, IFormFile file)
         {
@@ -27,8 +29,8 @@ namespace EmprestimoLiivroAspCore.Controllers
             _livroRepository.Cadastrar(livro);
 
             ViewBag.msg = "Cadastro realizado com sucesso";
-            return View();
 
+            return View();
         }
     }
 }
