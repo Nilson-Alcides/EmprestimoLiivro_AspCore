@@ -98,6 +98,10 @@ namespace EmprestimoLiivroAspCore.Controllers
             _cookieCarrinhoCompra.RemoverTodos();
             return RedirectToAction("confEmp");
         }
+        public IActionResult confEmp()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
