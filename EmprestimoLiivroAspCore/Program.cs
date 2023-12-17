@@ -42,7 +42,8 @@ builder.Services.AddSession(options =>
 
 //Add Gerenciador Arquivo como serviços
 builder.Services.AddScoped<GerenciadorArquivo>();
-builder.Services.AddScoped<Cookie>();
+builder.Services.AddScoped<EmprestimoLiivroAspCore.Cookie.Cookie>();
+builder.Services.AddScoped<EmprestimoLiivroAspCore.CarrinhoCompra.CookieCarrinhoCompra>();
 
 var app = builder.Build();
 

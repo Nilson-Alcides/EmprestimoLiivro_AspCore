@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0GFfzQ9REA3/CpqtaxEvUH2Fzb9iqVVau2unHEp2E9k=",
+  "Hash": "k3NkkyAhSAQOHV9cd8eqWpduCd/sk+P+eLtxHy3+4QI=",
   "Source": "EmprestimoLiivroAspCore",
   "BasePath": "_content/EmprestimoLiivroAspCore",
   "Mode": "Default",
@@ -102,6 +102,23 @@
       "OriginalItemSpec": "wwwroot\\Imagens\\b9bb6048082d7411d3f25a68a51fe5f2.jpeg"
     },
     {
+      "Identity": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\bancomysql.jpg",
+      "SourceId": "EmprestimoLiivroAspCore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\",
+      "BasePath": "_content/EmprestimoLiivroAspCore",
+      "RelativePath": "Imagens/bancomysql.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\bancomysql.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\bigdata.jpg",
       "SourceId": "EmprestimoLiivroAspCore",
       "SourceType": "Discovered",
@@ -119,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\Imagens\\bigdata.jpg"
     },
     {
+      "Identity": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\css.jpg",
+      "SourceId": "EmprestimoLiivroAspCore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\",
+      "BasePath": "_content/EmprestimoLiivroAspCore",
+      "RelativePath": "Imagens/css.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\css.jpg"
+    },
+    {
       "Identity": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\devops.jpg",
       "SourceId": "EmprestimoLiivroAspCore",
       "SourceType": "Discovered",
@@ -134,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Imagens\\devops.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\MongoDB.png",
+      "SourceId": "EmprestimoLiivroAspCore",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\",
+      "BasePath": "_content/EmprestimoLiivroAspCore",
+      "RelativePath": "Imagens/MongoDB.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\MongoDB.png"
     },
     {
       "Identity": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\js\\site.js",

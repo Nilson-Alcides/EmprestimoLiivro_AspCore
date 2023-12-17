@@ -42,9 +42,13 @@ namespace EmprestimoLiivroAspCore.Controllers
                 };
                 _cookieCarrinhoCompra.Cadastrar(item);
 
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Carrinho));
             }
 
+        }
+        public IActionResult Carrinho()
+        {
+            return View(_cookieCarrinhoCompra.Consultar());
         }
 
         public IActionResult Privacy()

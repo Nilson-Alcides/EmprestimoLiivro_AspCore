@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\EmprestimoLiivroAspCore.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\MongoDB.png",
+      "PackagePath": "staticwebassets\\Imagens\\MongoDB.png"
+    },
+    {
       "Id": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\b9bb6048082d7411d3f25a68a51fe5f2.jpeg",
       "PackagePath": "staticwebassets\\Imagens\\b9bb6048082d7411d3f25a68a51fe5f2.jpeg"
     },
     {
+      "Id": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\bancomysql.jpg",
+      "PackagePath": "staticwebassets\\Imagens\\bancomysql.jpg"
+    },
+    {
       "Id": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\bigdata.jpg",
       "PackagePath": "staticwebassets\\Imagens\\bigdata.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\css.jpg",
+      "PackagePath": "staticwebassets\\Imagens\\css.jpg"
     },
     {
       "Id": "C:\\Users\\Nilson\\source\\repos\\ASPNETCORE\\EmprestimoLiivroAspCore\\EmprestimoLiivro_AspCore\\EmprestimoLiivroAspCore\\wwwroot\\Imagens\\devops.jpg",
