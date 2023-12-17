@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 
 //Injeção de dependencia 
 builder.Services.AddScoped<ILivroRepository, LivroRepository>();
+builder.Services.AddScoped<IEmprestimoRepository, EmprestimoRepository>();
 
 
 //Add GerenciadorArquivo como serviços

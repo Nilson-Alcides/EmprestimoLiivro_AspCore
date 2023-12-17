@@ -7,7 +7,7 @@ namespace EmprestimoLiivroAspCore.Repository
     // Extends IEmprestimoRepository
     public class EmprestimoRepository : IEmprestimoRepository
     {
-       
+
         private readonly string _conexaoMySQL;
         // construtor com paramentro injeção da conexao do banco
         public EmprestimoRepository(IConfiguration conf)
@@ -21,7 +21,7 @@ namespace EmprestimoLiivroAspCore.Repository
             {
                 conexao.Open();
                 MySqlCommand cmd = new MySqlCommand("insert into tbEmprestimo values(default, @dtEmpre, @dtDev , @codUsu)", conexao);
-                
+
                 cmd.Parameters.Add("@dtEmpre", MySqlDbType.VarChar).Value = emprestimo.dtEmpre;
                 cmd.Parameters.Add("@dtDev", MySqlDbType.VarChar).Value = emprestimo.dtDev;
                 cmd.Parameters.Add("@codUsu", MySqlDbType.VarChar).Value = emprestimo.codUsu;
@@ -37,7 +37,7 @@ namespace EmprestimoLiivroAspCore.Repository
                 conexao.Open();
                 MySqlDataReader dr;
                 MySqlCommand cmd = new MySqlCommand("SELECT codEmp FROM tbEmprestimo ORDER BY codEmp DESC limit 1", conexao);
-                
+
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 dr = cmd.ExecuteReader();
                 while (dr.Read())
@@ -54,15 +54,11 @@ namespace EmprestimoLiivroAspCore.Repository
             throw new NotImplementedException();
         }
 
-        
-
-       
 
         public void Excluir(int Id)
         {
             throw new NotImplementedException();
         }
-
         public Emprestimo ObterEmprestimos(int Id)
         {
             throw new NotImplementedException();
