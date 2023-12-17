@@ -56,6 +56,12 @@ namespace EmprestimoLiivroAspCore.Controllers
             return View();
         }
 
+        public IActionResult RemoverItem(int id)
+        {
+            _cookieCarrinhoCompra.Remover(new Livro() { codLivro = id });
+            return RedirectToAction(nameof(Carrinho));
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
