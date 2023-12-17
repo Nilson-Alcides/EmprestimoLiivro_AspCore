@@ -1,7 +1,14 @@
+using EmprestimoLiivroAspCore.Repository.Contrato;
+using EmprestimoLiivroAspCore.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+//Injeção de dependencia 
+builder.Services.AddScoped<ILivroRepository, LivroRepository>();
 
 var app = builder.Build();
 
