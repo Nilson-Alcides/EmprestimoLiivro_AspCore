@@ -1,4 +1,6 @@
-﻿namespace EmprestimoLiivroAspCore.Cookie
+﻿using Microsoft.AspNetCore.DataProtection.KeyManagement;
+
+namespace EmprestimoLiivroAspCore.Cookie
 {
     public class Cookie
     {
@@ -22,6 +24,34 @@
             Options.IsEssential = true;
 
             _context.HttpContext.Response.Cookies.Append(Key, Valor, Options);
+        }
+        public void Atualizar(string Key, string Valor)
+        {
+            if (Existe(Key))
+            {
+                Remover(Key);
+            }
+            Cadastrar(Key, Valor);
+        }
+
+        public void Remover(string Key)
+        {
+            _context.HttpContext.Response.Cookies.Delete(Key);
+        }
+        public string Consultar(string Key, bool Cript = true)
+        {
+            var valor = _context.HttpContext.Request.Cookies[Key];
+            return valor;
+        }
+
+        public bool Existe(string Key)
+        {
+            if (_context.HttpContext.Request.Cookies[Key] == null)
+            {
+                return false;
+            }
+
+            return true; ;
         }
     }
 }
