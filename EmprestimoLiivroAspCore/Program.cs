@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddHttpContextAccessor();
 
 //Injeção de dependencia 
 builder.Services.AddScoped<ILivroRepository, LivroRepository>();
