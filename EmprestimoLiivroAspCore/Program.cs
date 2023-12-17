@@ -1,5 +1,6 @@
 using EmprestimoLiivroAspCore.Repository.Contrato;
 using EmprestimoLiivroAspCore.Repository;
+using EmprestimoLiivroAspCore.GerenciaArquivos;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,9 @@ builder.Services.AddControllersWithViews();
 //Injeção de dependencia 
 builder.Services.AddScoped<ILivroRepository, LivroRepository>();
 
+
+//Add GerenciadorArquivo como serviços
+builder.Services.AddScoped<GerenciadorArquivo>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
