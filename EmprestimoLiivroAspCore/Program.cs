@@ -1,6 +1,7 @@
 using EmprestimoLiivroAspCore.Repository.Contrato;
 using EmprestimoLiivroAspCore.Repository;
 using EmprestimoLiivroAspCore.GerenciaArquivos;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,9 +15,35 @@ builder.Services.AddScoped<ILivroRepository, LivroRepository>();
 builder.Services.AddScoped<IEmprestimoRepository, EmprestimoRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 
+builder.Services.Configure<CookiePolicyOptions>(options =>
+{
+
+    options.CheckConsentNeeded = context => true;
+    options.MinimumSameSitePolicy = SameSiteMode.None;
+});
+
+// corrigir problema com TEMPDATA
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    // Set a short timeout for easy testing. 
+    options.IdleTimeout = TimeSpan.FromSeconds(900);
+    options.Cookie.HttpOnly = true;
+    // Make the session cookie essential 
+    options.Cookie.IsEssential = true;
+});
+builder.Services.AddMvc().AddSessionStateTempDataProvider();
+
+builder.Services.AddMemoryCache(); // Guardar os dados na memoria
+builder.Services.AddSession(options =>
+{
+
+});
 
 //Add GerenciadorArquivo como serviços
 builder.Services.AddScoped<GerenciadorArquivo>();
+builder.Services.AddScoped<Cookie>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
