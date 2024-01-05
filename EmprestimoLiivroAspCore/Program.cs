@@ -31,7 +31,7 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     // Make the session cookie essential 
     options.Cookie.IsEssential = true;
-});
+});  
 builder.Services.AddMvc().AddSessionStateTempDataProvider();
 
 builder.Services.AddMemoryCache(); // Guardar os dados na memoria
