@@ -1,14 +1,10 @@
-﻿
-@model IEnumerable<EmprestimoLiivroAspCore.Models.Livro>
-@* @inject LojaVirtual.Libraries.Login.LoginCliente _loginCliente *@
+﻿@model IEnumerable<EmprestimoLiivroAspCore.Models.Livro>
+
 @{
     ViewData["Title"] = "Index";
     decimal Subtotal = 0;
 }
 
-
-@* @if (Model.Count > 0)
-{ *@
 <div class="container">
     <section id="order">
         <br />
@@ -16,8 +12,6 @@
         <h2 class="title-doc">Carrinho de compras</h2>
         <div class="alert alert-danger" style="display: none;" role="alert">
         </div>
-
-
 
         <div id="code_cart">
             <div class="card">
@@ -55,12 +49,9 @@
                                             <input type="hidden" class="inputProdutoId" value="@item.codLivro" />
                                             <input type="hidden" class="inputQuantidadeEstoque" value="@item.quantidade" />
                                             <input type="hidden" class="inputValorUnitario" value="R$ 00,00" />
-                                            
-                                           
-                                            <input type="text" style="width: 60px; text-align: center" readonly="readonly" class="form-control inputQuantidadeProdutoCarrinho" value="@item.quantidade">
-                                           
-                                           
-
+                                                                                       
+                                            <input type="text" style="width: 60px; text-align: center" readonly="readonly" 
+                                            class="form-control inputQuantidadeProdutoCarrinho" value="@item.quantidade">
                                         </div>
                                     </div>
                                 </td>
@@ -79,9 +70,7 @@
         </div>
     </section>
     <br />
-    <br />
-   
-
+    <br /> 
 </div>
 
 <div class="container">

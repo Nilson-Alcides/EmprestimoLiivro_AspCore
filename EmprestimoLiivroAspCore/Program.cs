@@ -8,37 +8,33 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
 builder.Services.AddHttpContextAccessor();
 
-//Injeção de dependencia 
+//Adicionar a interface como serviço 
 builder.Services.AddScoped<ILivroRepository, LivroRepository>();
 builder.Services.AddScoped<IEmprestimoRepository, EmprestimoRepository>();
 builder.Services.AddScoped<IItemRepository, ItemRepository>();
 
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
-
     options.CheckConsentNeeded = context => true;
     options.MinimumSameSitePolicy = SameSiteMode.None;
 });
 
-// corrigir problema com TEMPDATA
+// Corrigir problema com TEMPDATA para aumentar o tempo de duração
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
     // Set a short timeout for easy testing. 
     options.IdleTimeout = TimeSpan.FromSeconds(900);
     options.Cookie.HttpOnly = true;
-    // Make the session cookie essential 
+    // Deixar informado para o navegador que a sessão é essencial
     options.Cookie.IsEssential = true;
 });  
 builder.Services.AddMvc().AddSessionStateTempDataProvider();
 
 builder.Services.AddMemoryCache(); // Guardar os dados na memoria
-builder.Services.AddSession(options =>
-{
-
-});
 
 //Add Gerenciador Arquivo como serviços
 builder.Services.AddScoped<GerenciadorArquivo>();
@@ -57,7 +53,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession(); 
 app.UseRouting();
 
 app.UseAuthorization();

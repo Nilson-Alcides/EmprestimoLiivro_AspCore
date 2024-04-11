@@ -5,6 +5,7 @@ namespace EmprestimoLiivroAspCore.CarrinhoCompra
 {
     public class CookieCarrinhoCompra
     {
+        //criar uma chave
         private string Key = "Carrinho.Compras";
         private Cookie.Cookie _cookie;
 
@@ -17,6 +18,26 @@ namespace EmprestimoLiivroAspCore.CarrinhoCompra
          * Adicionar Item, Remover Item, Alterar Quantidade
          */
 
+        //Salvar
+        public void Salvar(List<Livro> Lista)
+        {
+            string Valor = JsonConvert.SerializeObject(Lista);
+            _cookie.Cadastrar(Key, Valor);
+        }
+        //Consulta
+        public List<Livro> Consultar()
+        {
+            if (_cookie.Existe(Key))
+            {
+                string valor = _cookie.Consultar(Key);
+                return JsonConvert.DeserializeObject<List<Livro>>(valor);
+            }
+            else
+            {
+                return new List<Livro>();
+            }
+        }
+        //Cadastrar
         public void Cadastrar(Livro item)
         {
             List<Livro> Lista;
@@ -66,28 +87,7 @@ namespace EmprestimoLiivroAspCore.CarrinhoCompra
                 Lista.Remove(ItemLocalizado);
                 Salvar(Lista);
             }
-        }
-        //Consulta
-        public List<Livro> Consultar()
-        {
-            if (_cookie.Existe(Key))
-            {
-                string valor = _cookie.Consultar(Key);
-                return JsonConvert.DeserializeObject<List<Livro>>(valor);
-            }
-            else
-            {
-                return new List<Livro>();
-            }
-        }
-       
-        //Salvar
-        public void Salvar(List<Livro> Lista)
-        {
-            string Valor = JsonConvert.SerializeObject(Lista);
-            _cookie.Cadastrar(Key, Valor);
-        }
-
+        }             
         // Verifica se existe
         public bool Existe(string Key)
         {

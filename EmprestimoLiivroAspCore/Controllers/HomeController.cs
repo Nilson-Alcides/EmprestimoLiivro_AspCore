@@ -9,25 +9,26 @@ namespace EmprestimoLiivroAspCore.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private ILivroRepository _livroRepository;
-        private CookieCarrinhoCompra _cookieCarrinhoCompra;
-
-        private IEmprestimoRepository _emprestimoRepository;
         private IItemRepository _itemRepository;
-        public HomeController(ILogger<HomeController> logger, ILivroRepository livroRepository, CookieCarrinhoCompra cookieCarrinhoCompra, IEmprestimoRepository emprestimoRepository, IItemRepository itemRepository)
+        private IEmprestimoRepository _emprestimoRepository;        
+        private CookieCarrinhoCompra _cookieCarrinhoCompra;
+        private ILivroRepository _livroRepository;
+
+        public HomeController(ILivroRepository livroRepository, CookieCarrinhoCompra cookieCarrinhoCompra, 
+                              IEmprestimoRepository emprestimoRepository, IItemRepository itemRepository)
         {
-            _logger = logger;
             _livroRepository = livroRepository;
             _cookieCarrinhoCompra = cookieCarrinhoCompra;
             _emprestimoRepository = emprestimoRepository;
             _itemRepository = itemRepository;
         }
 
+        //Exibe os livros na Index 
         public IActionResult Index()
         {
             return View(_livroRepository.ObterTodosLivros()); 
         }
+
         //Item ID = ID Produto
         public IActionResult AdicionarItem(int id)
         {
@@ -52,16 +53,13 @@ namespace EmprestimoLiivroAspCore.Controllers
             }
 
         }
+        
+        //Carrnho de compra
         public IActionResult Carrinho()
         {
             return View(_cookieCarrinhoCompra.Consultar());
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
+        }              
+        //Remover itens do carrinho
         public IActionResult RemoverItem(int id)
         {
             _cookieCarrinhoCompra.Remover(new Livro() { codLivro = id });
@@ -72,7 +70,6 @@ namespace EmprestimoLiivroAspCore.Controllers
         public IActionResult SalvarCarrinho(Emprestimo emprestimo)
         {
             List<Livro> carrinho = _cookieCarrinhoCompra.Consultar();
-
 
             Emprestimo mdE = new Emprestimo();
             Item mdI = new Item();
@@ -102,11 +99,9 @@ namespace EmprestimoLiivroAspCore.Controllers
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult Privacy()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }

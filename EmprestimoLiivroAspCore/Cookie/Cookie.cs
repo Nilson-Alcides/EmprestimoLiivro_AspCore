@@ -16,6 +16,21 @@ namespace EmprestimoLiivroAspCore.Cookie
          * CRUD - Cadastrar/Atualizar/Consultar/Remover - RemoverTodos/Exist
          */
 
+        // Verificar se existe
+        public bool Existe(string Key)
+        {
+            if (_context.HttpContext.Request.Cookies[Key] == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        // Deleta Cookie
+        public void Remover(string Key)
+        {
+            _context.HttpContext.Response.Cookies.Delete(Key);
+        }
         // Cadastrar Cookie
         public void Cadastrar(string Key, string Valor)
         {
@@ -25,6 +40,14 @@ namespace EmprestimoLiivroAspCore.Cookie
 
             _context.HttpContext.Response.Cookies.Append(Key, Valor, Options);
         }
+       
+        // Consulta Cookie
+        public string Consultar(string Key)
+        {
+            var valor = _context.HttpContext.Request.Cookies[Key];
+            return valor;
+        }
+       
         public void Atualizar(string Key, string Valor)
         {
             if (Existe(Key))
@@ -32,26 +55,6 @@ namespace EmprestimoLiivroAspCore.Cookie
                 Remover(Key);
             }
             Cadastrar(Key, Valor);
-        }
-
-        public void Remover(string Key)
-        {
-            _context.HttpContext.Response.Cookies.Delete(Key);
-        }
-        public string Consultar(string Key, bool Cript = true)
-        {
-            var valor = _context.HttpContext.Request.Cookies[Key];
-            return valor;
-        }
-
-        public bool Existe(string Key)
-        {
-            if (_context.HttpContext.Request.Cookies[Key] == null)
-            {
-                return false;
-            }
-
-            return true; ;
         }
     }
 }

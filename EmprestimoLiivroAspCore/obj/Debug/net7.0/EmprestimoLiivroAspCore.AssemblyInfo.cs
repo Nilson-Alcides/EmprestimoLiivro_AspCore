@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmprestimoLiivroAspCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6cf850d97e939f5c6bca3a3fc31c28de2487702")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmprestimoLiivroAspCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmprestimoLiivroAspCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

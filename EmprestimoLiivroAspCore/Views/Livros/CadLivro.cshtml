@@ -1,0 +1,49 @@
+﻿@model EmprestimoLiivroAspCore.Models.Livro
+
+@{
+    ViewData["Title"] = "CadLivro";
+}
+
+<h1>CadLivro</h1>
+
+<h4>Livro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadLivro" asp-controller="Livros" method="post" enctype="multipart/form-data"> 
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">                
+                <input asp-for="codLivro" type="hidden" class="form-control" />
+               <span asp-validation-for="codLivro" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="nomeLivro" class="control-label"></label>
+                <input asp-for="nomeLivro" class="form-control" />
+                <span asp-validation-for="nomeLivro" class="text-danger"></span>
+            </div> 
+
+            <br />
+            <div class="form-group">
+                
+                    <input type="file" name="file" id="file" /> <br />
+            
+                <span asp-validation-for="imagemLivro" class="text-danger"></span>
+            </div>
+            @*VAMOS ADD ESTA MENSAGEM*@
+             @ViewBag.msg 
+             <br />
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

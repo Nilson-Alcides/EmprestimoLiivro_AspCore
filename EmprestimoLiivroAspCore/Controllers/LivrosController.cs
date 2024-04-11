@@ -7,11 +7,10 @@ namespace EmprestimoLiivroAspCore.Controllers
 {
     public class LivrosController : Controller
     {
-        private readonly ILogger<LivrosController> _logger;
         private ILivroRepository _livroRepository;
-        public LivrosController(ILogger<LivrosController> logger, ILivroRepository livroRepository)
+        public LivrosController(ILivroRepository livroRepository)
         {
-            _logger = logger;
+            
             _livroRepository = livroRepository;
         }
         //Cadastra Livro Get
@@ -22,6 +21,24 @@ namespace EmprestimoLiivroAspCore.Controllers
         //Cadastra Livro Post
         [HttpPost]
         public IActionResult Index(Livro livro, IFormFile file)
+        {
+            var Caminho = GerenciadorArquivo.CadastrarImagemProduto(file);
+
+            livro.imagemLivro = Caminho;
+            _livroRepository.Cadastrar(livro);
+
+            ViewBag.msg = "Cadastro realizado com sucesso";
+
+            return View();
+        }
+
+        public IActionResult CadLivro()
+        {
+            return View();
+        }
+        //Cadastra Livro Post
+        [HttpPost]
+        public IActionResult CadLivro(Livro livro, IFormFile file)
         {
             var Caminho = GerenciadorArquivo.CadastrarImagemProduto(file);
 
